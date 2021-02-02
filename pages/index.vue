@@ -1,10 +1,9 @@
 <template>
-  <div id="hide-scroll-content" class="square">
-    <div class="child">child 1</div>
-    <div class="child">child 2</div>
-    <div class="child">child 3</div>
-  </div>
-</template>
+<div class="square" id="hide-scroll-content">
+  <div class="child">child 1</div>
+  <div class="child">child 2</div>
+  <div class="child">child 3</div>
+</div></template>
 
 <script>
 export default {
