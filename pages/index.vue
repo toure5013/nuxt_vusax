@@ -7,17 +7,40 @@
 </template>
 
 <script>
-
 export default {
+  data() {
+    return {
+      hasOpenLoading: false,
+      loading_types: [
+        "default",
+        "waves",
+        "corners",
+        "border",
+        "points",
+        "square",
+        "gradient",
+        "rectangle",
+        "circles",
+        "square-rotate",
+        "scale",
+      ],
+      color : '#ff6600',
+    };
+  },
   mounted() {
-      this.openLoading();
+    //call the loading when the component launch
+    this.openLoading();
   },
   components: {},
   methods: {
     openLoading() {
+      //create the oading
       const loading = this.$vs.loading({
-        type : "corners"
+        type: this.loading_types[8],
+         color: this.color
       });
+
+      //close the loading
       this.hasOpenLoading = true;
       setTimeout(() => {
         loading.close();
